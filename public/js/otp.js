@@ -4,7 +4,7 @@ $(document).ready(() => {
 	$('#otp_span').html("<h4>PLEASE ENTER AN OTP SEND TO +91-"+$('#number').val());
 
 var send_otp = function (){	
-	$.post('/washing/index.php/user_ctrl/otp',
+	$.post('/user/otp',
 	{
 		number : $('#number').val(),
 		otp : otp_sms
@@ -19,7 +19,7 @@ var send_otp = function (){
 
 	$('#otp_btn').click(() => {
 		if(otp_sms == $('#otp').val()){
-			$.post('/washing/index.php/user_ctrl/verify',
+			$.post('/user/verify',
 				{
 					email : $('#email').val()
 				},

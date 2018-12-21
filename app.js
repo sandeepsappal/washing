@@ -21,7 +21,7 @@ var account = require('./routes/account')
 var test = require('./routes/test')(io)
 var purchaseHistory = require('./routes/purchaseHistory');
 var machineSocket = require('./routes/machineSocket')(io);
-var queryies=require('./routes/queryies');
+var queryies=require('./routes/queries');
 app.use(cookieSession({
   name: 'laudrybay',
   keys: ['abhishek0058'],
@@ -49,7 +49,7 @@ app.use('/account', account);
 app.use('/test', test);
 app.use('/purchaseHistory', purchaseHistory);
 app.use('/machineSocket', machineSocket);
-app.use('/queryies', queryies);
+app.use('/queries', queryies);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

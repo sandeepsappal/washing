@@ -1,9 +1,7 @@
 $.getJSON(`/package/all`, result => showPackage(result))
 
 showPackage=data=>{ 
-console.log(data['result']);
-
-    var package=`<div class="container">
+	    var package=`<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-12">
 					<div class="page-title">
@@ -14,8 +12,6 @@ console.log(data['result']);
 				</div>
             </div>`
             $.each(data['result'],(i,item)=>{
-				console.log(item);
-				
                 if(i===0){ package+='<div class="row">'}
                     package+=`<div class="col-sm-12 col-md-3">
 					<div class="panel panel-default panel-pricing wow fadeInDown">
@@ -39,7 +35,6 @@ console.log(data['result']);
 					i=0;
 					package+=`</div></div>`
 				}
-
 			})
 		$('#package').html(package);
 		}
