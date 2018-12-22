@@ -1,5 +1,4 @@
 $.getJSON(`/package/all`, result => showPackage(result))
-
 showPackage=data=>{ 
 	    var package=`<div class="container">
 			<div class="row">
@@ -29,7 +28,6 @@ showPackage=data=>{
 							</table>
 						</div>
 					</div>
-		
 				</div>`
 				if(i===4){
 					i=0;
